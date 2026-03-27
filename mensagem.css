@@ -21,6 +21,7 @@ body {
     align-items: center;
     width: 100%;
     padding-top: 5rem; 
+    min-height: 100vh;
 }
 
 #heart {
@@ -45,11 +46,35 @@ body {
     font-family: "Dancing Script", cursive;
     font-size: 1.4rem; 
     line-height: 1.5;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
     background: rgba(0, 0, 0, 0.4); 
     padding: 25px;
     border-radius: 20px;
     margin-bottom: 50px; /* Garante que o texto não cole no final da tela */
+}
+.texto-carta p{
+    color: rgb(170, 210, 239);
+}
+.caixa-principal {
+    width: 85%;
+    max-width: 450px;
+    text-align: center;
+    color: white;
+    font-family: "Dancing Script", cursive;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    
+    /* Fundo bem clarinho/transparente */
+    background: rgba(0, 0, 0, 0.3); 
+    padding: 30px 20px;
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    
+    /* Efeito de vidro (Blur) - Fica incrível no iPhone */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    
+    margin-bottom: 50px; /* Espaço final para o scroll */
 }
 
 @keyframes heartFadeInOut {

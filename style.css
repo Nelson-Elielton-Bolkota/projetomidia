@@ -4,120 +4,165 @@
     box-sizing: border-box;
     background-image: url(https://i.pinimg.com/564x/08/5b/42/085b42865faef297afd90a70c930d925.jpg);
 }
-header{
-   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center; 
+
+header {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 body {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
+
 .container-principal {
     width: 100%;
     display: flex;
-    flex-direction: column; 
-    align-items: center; 
+    flex-direction: column;
+    align-items: center;
 }
+
 .mensagem-container {
-    margin-top: 4rem; 
+    margin-top: 4rem;
     text-align: center;
     animation: fadeIn 5s ease-in;
 }
 
 .nomes {
     color: white;
-  font-family: "Dancing Script", cursive;
+    font-family: "Dancing Script", cursive;
     font-size: 1.5rem;
     margin-bottom: 20px;
 }
 
 .botao-ler {
+    font-family: "Dancing Script", cursive;
     display: inline-block;
-    padding: 12px 35px;
-    color: #e00000;
-    border: 2px solid #e00000;
+    padding: 1rem 3rem;
+    color: #ff4d4d; 
+    border: 2px solid #ff4d4d;
     text-decoration: none;
-    border-radius: 30px;
+    border-radius: 2rem;
     font-weight: bold;
     text-transform: uppercase;
-    transition: 0.3s;
+    transition: 0.4s;
+    background: transparent;
+    
+    animation: neon-pulse 2s infinite ease-in-out;
+    
+    text-shadow: 0 0 5px #ff4d4d;
+    letter-spacing: 2px;
 }
 
 .botao-ler:hover {
-    background-color: #e00000;
-    color: black;
-    box-shadow: 0 0 20px #e00000;
+    background-color: #ff4d4d;
+    color: white;
+    box-shadow: 0 0 40px #ff4d4d;
+    transform: scale(1.05); 
+    text-shadow: none;
 }
+
 svg {
-  overflow: visible;
+    overflow: visible;
 }
+
 svg path#line {
-  fill: none;
-  stroke: #e00000;
-  stroke-width: 2;
-  stroke-linecap: butt;
-  stroke-linejoin: round;
-  stroke-miterlimit: 4;
-  stroke-dasharray:none;
-  stroke-opacity: 1;
-  stroke-dasharray: 1;
-  stroke-dashoffset: 1;
-  animation: dash 4s linear infinite;
+    fill: none;
+    stroke: #e00000;
+    stroke-width: 2;
+    stroke-linecap: butt;
+    stroke-linejoin: round;
+    stroke-miterlimit: 4;
+    stroke-dasharray: none;
+    stroke-opacity: 1;
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    animation: dash 4s linear infinite;
 }
+
 svg path#heart {
-  transform-origin: 50% 50%;
-  animation: blink 4s linear infinite;
+    transform-origin: 50% 50%;
+    animation: blink 4s linear infinite;
+}
+
+@keyframes neon-pulse {
+    0% {
+        box-shadow: 0 0 5px #ff4d4d, inset 0 0 2px #ff4d4d;
+    }
+    50% {
+        box-shadow: 0 0 20px #ff4d4d, inset 0 0 10px #ff4d4d;
+    }
+    100% {
+        box-shadow: 0 0 5px #ff4d4d, inset 0 0 2px #ff4d4d;
+    }
 }
 
 @keyframes fadeIn {
-    0% { opacity: 0; }
-    70% { opacity: 0; }
-    100% { opacity: 1; }
+    0% {
+        opacity: 0;
+    }
+
+    70% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
+
 @keyframes dash {
-  0% {
-    stroke-dashoffset: 1;
-  }
-  80% {
-    stroke-dashoffset: 0;
-  }
-  100% {
-    stroke-dashoffset: 0;
-  }
+    0% {
+        stroke-dashoffset: 1;
+    }
+
+    80% {
+        stroke-dashoffset: 0;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+    }
 }
 
 @keyframes blink {
-  0% {
-    opacity: 0;
-    transform: scale(0);
-  }
-  60% {
-    opacity: 0;
-    transform: scale(0);
-  }
-  70% {
-    opacity: 1;
-    transform: scale(1.2);
-  }
-  75% {
-    opacity: 1;
-    transform: scale(1.0);
-  }
-  80% {
-    opacity: 1;
-    transform: scale(1.2);
-  }
-  85% {
-    opacity: 1;
-    transform: scale(1.0);
-  }
-  100% {
-    opacity: 0;
-    transform: scale(1.0);
-  }
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    60% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    70% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+
+    75% {
+        opacity: 1;
+        transform: scale(1.0);
+    }
+
+    80% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+
+    85% {
+        opacity: 1;
+        transform: scale(1.0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1.0);
+    }
 }

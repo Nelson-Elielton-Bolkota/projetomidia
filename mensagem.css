@@ -37,6 +37,16 @@ body {
     transform: translateX(-50%); 
     transition: opacity 1s ease-in-out;
 }
+/* Estilização da imagem dos olhos */
+.eyes {
+    width: 100%;           /* Ocupa a largura total disponível na caixa */
+    max-width: 300px;      /* Limita o tamanho máximo para não ficar gigante */
+    height: auto;          /* Mantém a proporção da imagem sem esticar */
+    display: block;        /* Remove espaços indesejados abaixo da imagem */
+    margin: 20px auto 0;   /* Centraliza e dá um espaço no topo */
+    border-radius: 15px;   /* Arredonda as bordas para combinar com o layout */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Dá um leve destaque */
+}
 
 .texto-carta {
     width: 85%; 
